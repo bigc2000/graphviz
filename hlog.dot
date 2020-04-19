@@ -1,0 +1,19 @@
+digraph g {
+    label = "Region server";
+    shape="Mrecord";
+    subgraph cluster_hlog{
+        label = "HLog,hbase region server log";
+        type = record;
+        walentry [
+        shape=box,
+        label=<
+            <table border="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="0"><tr><td colspan="2">WALEntry</td></tr><tr><td>
+HLOG
+</td><td>WALEdit</td></tr></table>
+        >];
+    }
+
+    hlog[ shape=record label="sequence id|write time|cluster ids|region name|table name";
+]
+
+}
